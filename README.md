@@ -1,4 +1,4 @@
-# Hi there, I'm [Your Name] 👋
+# Hi there, I'm Vatsalya Betala👋
 
 I'm @VatsalyaBetala, and I'm passionate about Data Science and AI. 
 
