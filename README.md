@@ -13,7 +13,7 @@ I'm @VatsalyaBetala, and I'm passionate about Data Science and AI.
 - Email: vatsalyabetala@gmal.com
 
 ## 🛠️ Skills
-- Programming Languages: Python, Javascript, C, Html. 
+- Programming Languages: Python, Javascript, C, Html, Flask, Haskell, Django, R Programming
 - Tools: Git, Docker, VSB
 
 Feel free to reach out, and let's connect! 😊
