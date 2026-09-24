@@ -1,59 +1,155 @@
-# Hey, I'm Vatsalya 👋
+<div align="center">
 
-I'm studying **Artificial Intelligence at Columbia**, after doing my undergrad in **Computer Science + Mathematics**.
+# Vatsalya Betala
 
-I really, really like understanding things.
+<!-- ⚠️ uncertain — external service; if it ever breaks, delete this line -->
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=800&color=8B949E&center=true&vCenter=true&width=560&lines=learn+it+%E2%86%92+derive+it+%E2%86%92+implement+it+%E2%86%92+break+it;why+does+SGD+pick+this+minimum%3F;did+the+model+get+it+right+for+the+right+reason%3F" alt="typing" />
 
-I hate stopping at *“this works, here's how you use it.”* If I'm learning something, I usually end up wanting to pull it apart — where did this equation come from? Why was it formulated this way? What assumptions are we making? Can we prove it? What's the intuition behind the proof? What breaks if we change something?
+**M.S. Artificial Intelligence @ Columbia University** · Computer Science + Mathematics
 
-I'll almost always prefer spending an unreasonable amount of time dissecting a concept over just learning enough to apply it to a problem.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vatsalya-betala/)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:vatsalyabetala@gmail.com)
 
-And I **love optimizing things**. Models, algorithms, code, schedules, workflows — sometimes things that probably didn't need to be optimized in the first place lol.
+</div>
 
-Most of all, I just love learning. There's something ridiculously satisfying about going from *“I have absolutely no idea what this means”* to being able to derive it, explain it simply, and actually understand why it works.
+---
 
-So if you're stuck on some weird concept, have something you want to dissect from first principles, or just found something really cool — **come talk to me.** I'd genuinely love to sit down, tear it apart with you, and probably learn something new myself in the process.
+I understand things from first principles. When I learn something, I want to know **why it works, where the equation came from, what it assumes, and what breaks when you change those assumptions.**
 
-### What I'm trying to understand
+I'd rather dissect a concept than just apply it. I also optimize things compulsively: models, code, systems, schedules, occasionally things that didn't need it.
 
-A lot of what I'm interested in right now comes from a question I ran into while working on **PlantGuard**:
+---
 
-**When a neural network gets something right, how do we know it got it right for the right reason?**
+## 🧭 The question I keep coming back to
 
-I'm really interested in the relationship between **optimization and representation learning**. We specify a loss function and an architecture, throw an optimizer at millions of parameters, and somehow useful internal structure emerges. I want to understand why. How do the loss landscape, inductive biases, optimization dynamics, and data interact to determine *what kind of solution* a network eventually learns?
+We know how to minimize the loss:
 
-Long term, I'm working toward models that aren't just accurate, but whose behavior we can **understand, interrogate, and trust for the right reasons**.
+```math
+\theta^\star = \arg\min_\theta \mathcal{L}(\theta)
+```
 
-I'm still figuring out exactly where that takes me..
+But in an overparameterized network, $\arg\min$ isn't a point. It's a whole manifold of solutions that fit the data equally well. The optimizer picks one:
 
-### Some things I've built and am proud of: 
+```math
+\theta^\star = \mathcal{A}\big(\theta_0,\ \mathcal{D},\ \eta,\ \text{architecture}\big) \in \arg\min_\theta \mathcal{L}(\theta)
+```
 
-**🌱 PlantGuard**  
-An interpretable computer vision pipeline for plant disease detection. A big part of the project was asking not just *what* the model predicted, but *why*.
+<div align="center">
+<img src="./assets/optimizer-picks.svg" width="100%" alt="Three gradient descent runs from different initializations landing at different points in a valley of minima" />
+</div>
 
-**🗓️ OurClock**  
-An intelligent university scheduling system. This one sent me very far down the optimization rabbit hole.
+**Which one it picks, and why, determines the representation.** That's what decides whether a model learned the disease or the background, the concept or the shortcut.
 
-### Languages & tools I've played with
+<table>
+<tr>
+<td width="50%" valign="top">
 
-**Languages**  
-Python · C · C++ · Haskell · R · Julia · JavaScript · SQL · HTML/CSS
+**What I'm pulling on**
+- Optimization dynamics & implicit bias
+- Representation learning
+- Interpretability
+- Shortcut learning
+- Generalization
 
-**ML / AI**  
-PyTorch · TensorFlow · scikit-learn · OpenCV · Hugging Face
+</td>
+<td width="50%" valign="top">
 
-**Math / Data / Scientific Computing**  
-NumPy · Pandas · SciPy · Matplotlib · Jupyter
+**Open questions on my desk**
+- When is a correct prediction *not* evidence of understanding?
+- What features does SGD prefer, and is it predictable?
+- Can we detect a shortcut before it fails in deployment?
 
-**Other stuff**  
-Git · GitHub · Docker · Linux · Bash · Flask · PostgreSQL · SQLite
+</td>
+</tr>
+</table>
 
-I don't claim to be an expert in everything listed here. Some I've used for years, some for specific projects, and some because I got curious and went down another rabbit hole.
+---
 
-### Right now
+## 🔬 Things I've built
 
-I'm doing my **M.S. in Artificial Intelligence at Columbia University** and trying to go much deeper into the foundations of machine learning and deep learning.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-Still learning. Probably overthinking something. Definitely optimizing something.
+### 🌱 [PlantGuard](https://github.com/VatsalyaBetala/PlantGuard)
+<!-- ⚠️ verify repo URL -->
+Interpretable computer vision for plant disease detection.
 
-If you know something interesting that I don't, **please come teach me.**
+Accuracy was the easy part. The real question was **what the model was actually looking at**, and whether its predictions came from genuine disease features or from something it shouldn't have been using.
+
+`PyTorch` `Computer Vision` `Interpretability`
+
+</td>
+<td width="50%" valign="top">
+
+### 🗓️ [OurClock](https://github.com/VatsalyaBetala/OurClock)
+<!-- ⚠️ verify repo URL -->
+University scheduling built around real constraints, not toy ones.
+
+This project sent me deep into **optimization and constraint modeling**, and I still haven't fully climbed out.
+
+`Python` `Optimization` `Scheduling`
+
+</td>
+</tr>
+</table>
+
+---
+
+## ⚙️ How I work
+
+```text
+learn it → derive it → implement it → break it → figure out why → repeat
+```
+
+---
+
+## 🧰 Toolkit
+
+<!-- ⚠️ uncertain — verify each skillicons ID renders (haskell, julia, r, sklearn, opencv) -->
+**Languages**
+<br/>
+<img src="https://skillicons.dev/icons?i=python,c,cpp,haskell,r,julia,js,html,css&perline=9" alt="languages" />
+
+**ML / Scientific Computing**
+<br/>
+<img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&perline=9" alt="ml" />
+<br/>
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+
+**Systems & Data**
+<br/>
+<img src="https://skillicons.dev/icons?i=git,docker,linux,flask,postgres,sqlite&perline=9" alt="tools" />
+
+---
+
+## 📊 GitHub
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=VatsalyaBetala&hide_border=true&theme=github-dark-blue&background=00000000" />
+  <img src="https://streak-stats.demolab.com?user=VatsalyaBetala&hide_border=true&background=00000000" alt="contributions and streak" />
+</picture>
+<br/>
+<!-- ⚠️ uncertain — generated by .github/workflows/profile-cards.yml; confirm filenames after first run -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/3-stats.svg" />
+  <img src="./profile-summary-card-output/default/3-stats.svg" width="49%" alt="commits, PRs, issues, stars" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/4-productive-time.svg" />
+  <img src="./profile-summary-card-output/default/4-productive-time.svg" width="49%" alt="commits by hour" />
+</picture>
+</div>
+
+---
+
+<div align="center">
+
+**Have a weird concept, proof, paper, or idea you want to break down from first principles?**<br/>
+If you know something I don't, teach me. If you're stuck on something interesting, let's dissect it together.
+
+</div>
